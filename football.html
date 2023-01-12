@@ -8,9 +8,8 @@
     <style>
         .field{
             height: 600px;
-            width: auto;
-            
-
+            width: 100%;
+         
         }
         .field:hover .player{
             transform:rotate(-10deg);
@@ -19,41 +18,48 @@
             
         }
         .field:hover .ball{
-            transition: transform 2s ease-out 1.1s;
-            transform: translate(-800px) rotate(-90deg);
+            transition: 2s ease-out 1s;
+            transform: scale(0.85) translate(-990px,150px) rotate(-60deg);
+            
             
         }
         .player{
             margin-left: 900px;
             height: 400px;
-           
-            
-            
+            transform-origin: bottom top;   
+        }
+        #goalpost{
+            position: relative;
+            z-index: 1;
+
         }
         
-        .inner{
+        #inner{
             transform: translate(1050px,-398px);
+            position: relative;
+            z-index: 2;
         }
         
         .ball{
             height: 70px;
             width: 70px;
-            
            
         }
         .goalpost{
-            height: 210px;
-            transform: translate(0px,-490px) rotate(-10deg);
+            height: 250px;
+            position: relative;
+            top:-500px;
+            left: -10px;  
         }
     </style>
 </head>
 <body>
     <div class="field">
         <img class="player" src="messi.png" alt="">
-        <div class="inner">
+        <div id="inner">
             <img class="ball" src="football.png" alt="">
         </div>
-        <div>
+        <div id="goalpost">
             <img class="goalpost" src="goalpost.png" alt="">
         </div>
     </div>
